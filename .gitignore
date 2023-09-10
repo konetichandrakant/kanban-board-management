@@ -1,0 +1,24 @@
+# Ignore node_modules in the root of your project
+node_modules/
+
+# Ignore .env files in the root of your project
+*.env
+
+# Ignore node_modules in the server folder
+server/node_modules/
+
+# Ignore .env files in the server folder
+server/*.env
+
+# Ignore node_modules in the client folder
+client/node_modules/
+
+# Ignore .env files in the client folder
+client/*.env
+
+# Ignore any built or compiled files
+# Example: build output, bundled JavaScript files, etc.
+# You might need to adjust this based on your build tools
+/build/
+/dist/
+/out/

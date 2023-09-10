@@ -1,0 +1,70 @@
+.input-box {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 270px;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  font-size: large;
+  align-items: center;
+}
+
+.input-password {
+  display: flex;
+  align-items: center;
+}
+
+.header-button{
+  font-size: 20px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.label{
+  margin: 5px;
+}
+
+.radio-buttons{
+  flex-direction: row;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.register {
+  min-width: auto;
+  width: 300px;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.register-button {
+  background-color: aquamarine;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.register-center {
+  display: flex;
+  padding-top: 5vh;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
