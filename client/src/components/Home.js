@@ -54,7 +54,7 @@ function Home() {
 
 
   const getData = () => {
-    axios.get(`${BASE_URL}/tasks`, { withCredentials: true })
+    axios.get(`${BASE_URL}/tasks`)
       .then((resp) => {
         setTasks(resp.data)
         console.log(resp.data)
@@ -64,7 +64,7 @@ function Home() {
   }
 
   const postData = (data) => {
-    axios.post(`${BASE_URL}/tasks`, data, { withCredentials: true })
+    axios.post(`${BASE_URL}/tasks`, data)
       .then(() => {
         console.log('data saved');
       }).catch(() => {

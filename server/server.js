@@ -7,7 +7,6 @@ const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
-const PORT = process.env.PORT;
 const REQUEST_URL = process.env.REQUEST_URL;
 
 app.use(express.json());
@@ -16,7 +15,7 @@ app.use(cookieParser())
 app.use(
   cors({
     origin: REQUEST_URL,
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    methods: ['POST','GET'],
     credentials: true,
   })
 );
