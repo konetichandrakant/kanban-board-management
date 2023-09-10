@@ -58,6 +58,7 @@ function Home() {
     axios.get(`/tasks`, { withCredentials: true })
       .then((resp) => {
         setTasks(resp.data)
+        console.log(resp.data)
       }).catch((reason) => {
         console.log(reason)
       });
