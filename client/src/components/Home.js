@@ -54,7 +54,8 @@ function Home() {
 
 
   const getData = () => {
-    axios.get(`${BASE_URL}/tasks`, { withCredentials: true })
+    // axios.get(`${BASE_URL}/tasks`, { withCredentials: true })
+    axios.get(`/tasks`, { withCredentials: true })
       .then((resp) => {
         setTasks(resp.data)
       }).catch((reason) => {
@@ -63,7 +64,8 @@ function Home() {
   }
 
   const postData = (data) => {
-    axios.post(`${BASE_URL}/tasks`, data, { withCredentials: true })
+    // axios.post(`${BASE_URL}/tasks`, data, { withCredentials: true })
+    axios.post(`/tasks`, data, { withCredentials: true })
       .then(() => {
         console.log('data saved');
       }).catch(() => {

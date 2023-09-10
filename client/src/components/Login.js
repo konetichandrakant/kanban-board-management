@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../views/Login.css';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { BASE_URL } from '../validations';
+// import { BASE_URL } from '../validations';
 
 function Login() {
   const navigate = useNavigate();
@@ -13,7 +13,8 @@ function Login() {
   const [isValid, setIsValid] = useState(null);
 
   const LoginDetails = () => {
-    axios.post(`${BASE_URL}/login`
+    // axios.post(`${BASE_URL}/login`
+    axios.post(`/login`
       , {
         userId: userId,
         password: password

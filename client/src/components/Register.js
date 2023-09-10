@@ -3,7 +3,7 @@ import '../views/Register.css';
 import { useNavigate } from 'react-router-dom';
 import { validateUsername, validatePassword, validateName } from '../validations';
 import axios from 'axios';
-import { BASE_URL } from '../validations';
+// import { BASE_URL } from '../validations';
 
 function Register() {
 
@@ -34,7 +34,8 @@ function Register() {
     if (!validateDetails)
       return setIsValid(false);
     setIsValid(true);
-    axios.post(`${BASE_URL}/register`,
+    // axios.post(`${BASE_URL}/register`,
+    axios.post(`/register`,
       {
         username: username
         , password: password
