@@ -69,5 +69,3 @@ app.post("/tasks", jwtverify, async (req, res) => {
     return res.send('failed to update');
   }
 })
-
-app.listen(PORT)
