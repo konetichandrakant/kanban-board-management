@@ -8,18 +8,18 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 const PORT = process.env.PORT;
-// const REQUEST_URL = process.env.REQUEST_URL;
+const REQUEST_URL = process.env.REQUEST_URL;
 
 app.use(express.json());
 app.use(cookieParser())
 
-// app.use(
-//   cors({
-//     origin: REQUEST_URL,
-//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: REQUEST_URL,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  })
+);
 
 mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
   console.log('connected to database....');
