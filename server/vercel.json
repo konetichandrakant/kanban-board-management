@@ -1,19 +1,19 @@
 {
   "version": 2,
   "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.3.1"
+    "./server.js": {
+      "runtime": "@vercel/node"
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "./server.js"
     }
   ],
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "./(.*)",
       "headers": [
         {
           "key": "Access-Control-Allow-Credentials",
