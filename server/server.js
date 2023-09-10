@@ -10,16 +10,15 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 const REQUEST_URL = process.env.REQUEST_URL;
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', REQUEST_URL);
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
+app.use(
+  cors({
+    origin: 'https://kanban-board-management-frontend.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  })
+);
 
 app.use(cookieParser())
-app.use(cors({ credentials: true, origin: true }));
-app.use(cors(corsOptions));
 
 mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
   console.log('connected to database....');
