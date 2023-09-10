@@ -11,7 +11,7 @@ const PORT = process.env.PORT;
 const REQUEST_URL = process.env.REQUEST_URL;
 
 const corsOptions = {
-  origin: REQUEST_URL,
+  origin: `${REQUEST_URL}/*`,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 204, // No Content for preflight requests
   allowedHeaders: 'Content-Type,Authorization',
