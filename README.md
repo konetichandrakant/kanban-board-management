@@ -16,4 +16,5 @@ Details of project:
 U can view DEMO of this project in the below mentioned LINK :-
 https://drive.google.com/file/d/1qxGSpb3EaFzX70360rRJR4QkYAw9rvt2/view?usp=sharing
 
-![Alt text](https://drive.google.com/file/d/1SIy1afYEzXXjr0YApZvKH7hofZUfOEmv/view)
+
+UI image link :-https://drive.google.com/file/d/1SIy1afYEzXXjr0YApZvKH7hofZUfOEmv/view?usp=sharing
