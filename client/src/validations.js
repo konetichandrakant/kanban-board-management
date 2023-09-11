@@ -19,6 +19,6 @@ const loggedIn = () => {
   return userDetails;
 }
 
-const BASE_URL = 'https://kanban-board-management-api.vercel.app'
+const BASE_URL = 'http://localhost:5000'
 
 module.exports = { validateName, validatePassword, validateUsername, loggedIn, BASE_URL };

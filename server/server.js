@@ -7,15 +7,28 @@ const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
+const PORT = process.env.PORT;
 const REQUEST_URL = process.env.REQUEST_URL;
 
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser());
+
+if (process.env.NODE_ENV === "production") {
+  const path = require("path");
+  app.use(express.static(path.resolve(__dirname, 'client', 'build')));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'), function (err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    });
+  })
+}
 
 app.use(
   cors({
     origin: REQUEST_URL,
-    methods: ['POST','GET'],
+    methods: ['POST', 'GET'],
     credentials: true,
   })
 );
@@ -68,3 +81,5 @@ app.post("/tasks", jwtverify, async (req, res) => {
     return res.send('failed to update');
   }
 })
+
+app.listen(PORT);
