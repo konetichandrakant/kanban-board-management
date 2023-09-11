@@ -16,4 +16,4 @@ Details of project:
 U can view DEMO of this project in the below mentioned LINK :-
 https://drive.google.com/file/d/1qxGSpb3EaFzX70360rRJR4QkYAw9rvt2/view?usp=sharing
 
-![IMAGE]('C:\Users\Koneti Chandrakant\OneDrive\Pictures\kanban-board')
+![Alt text](image-1.png)
